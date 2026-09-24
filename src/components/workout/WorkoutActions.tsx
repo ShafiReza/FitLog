@@ -12,8 +12,8 @@ export default function WorkoutActions({ workout }: Props) {
   const { addToPlan, addToSaved, isInPlan, isSaved, planCount } = usePlan();
 
   const planFull = planCount >= 5;
-  const alreadyInPlan = isInPlan(workout.id);
-  const alreadySaved = isSaved(workout.id);
+  const alreadyInPlan = isInPlan(String(workout.id));
+  const alreadySaved = isSaved(String(workout.id));
 
   return (
     <div className="flex flex-col sm:flex-row gap-3 pt-2">

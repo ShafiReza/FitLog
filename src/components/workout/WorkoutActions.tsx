@@ -1,3 +1,4 @@
+
 "use client";
 
 import { Workout } from "@/lib/types";
